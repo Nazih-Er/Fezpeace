@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+  
+  :root {
+    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
+    --bg-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.621);
+}
+*::-webkit-scrollbar{
+    width: .4rem;
+}
+*::-webkit-scrollbar-track{
+    background: rgb(6, 6, 44);
+}
+*::-webkit-scrollbar-thumb{
+    background: #0040ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* text-shadow: var(--bg-text-shadow); */
+}
+
+nav{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.279);
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    /* box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.386); */
+}
+
+nav ul{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    color: black;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+ul li{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+ul li:hover::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    /* display: none; */
+    transition: ease 2s;
+}
+
+ul li a:hover{
+    color: black;
+}
+
+.logo {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.logo .bluebirdlogo {
+    height: 100%;
+}
+
+.logo p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(66, 68, 74);
+    text-shadow: var(--bg-text-shadow);
+}
+
+#firstsection{
+    height: 100vh;
+    background-color: rgba(175, 175, 222, 0.511);
+    width: 100%;
+    /* z-index: 2000; */
+}
+
+#firstsection .carousel-inner{
+    width: 100%;
+    height: 100vh;
+    /* padding: 0 50px; */
+}
+#firstsection .carousel-inner::after{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(178, 170, 236, 0.533);
+}
+
+#firstsection .carousel-item{
+    overflow: hidden;
+}
+
+#firstsection .carousel-item img{
+    width: 100%;
+    height: 100vh;
+}
+
+
+#firstsection .welcomeline{
+    position: absolute; 
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#firstsection .welcometag{
+    font-size: 110px;
+    font-weight: bold;
+    font-family: 'Cookie', cursive;
+    letter-spacing: 2px;
+    line-height: 100px;
+    padding: 5px;
+    /* text gradiant */
+    background: -webkit-linear-gradient(317deg, rgba(0, 60, 255, 0.81) 0%, rgb(255 0 123) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* secondsection */
+
+#secondsection{
+    height: 100vh;
+}
+
+#secondsection img{
+    /* background-size: cover; */
+    height: 100vh;
+    width: 100%;
+    filter: blur(20px);
+    position: absolute;
+    /* -webkit-backdrop-filter: blur(30px);  */
+    z-index: -2;
+}
+
+.ourroom{
+    position: relative;
+    top: 90px;
+    height: 400px;
+    width: 100%;
+    /* background-color: #0040ff; */
+}
+
+.head{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.roomselect{
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.roomselect .roombox{
+    height: 100%;
+    width: 300px;
+    background-color: rgb(8, 8, 48);
+    border-radius: 10px;
+    overflow: hidden;
+    /* margin: 0 20px; */
+}
+
+.hotelphoto{
+    height: 250px;
+    width: 100%;
+    background-color: aquamarine;
+    background-size: cover;
+}
+
+.h1{
+    background-image: url(../hotel/room1.jpg);
+}
+.h2{
+    background-image: url(../hotel/room2.jpg);
+}
+.h3{
+    background-image: url(../hotel/room3.jpg);
+}
+.h4{
+    background-image: url(../hotel/room4.jpg);
+}
+
+.roomdata{
+    text-align: center;
+}
+
+.roomdata h2{
+color: rgb(207, 211, 255);
+font-size: 30px;
+}
+
+.sevices{
+    display: flex;
+}
+
+.services i{
+    color:white;
+    margin: 7px;
+}
+
+.bookbtn{
+   margin: 10px;
+}
+
+/* roombookcss */
+
+#guestdetailpanel{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.558);
+    position: fixed;
+    z-index: 10000;
+}
+
+.logoutbtn{
+    height: 20px;
+    width: 200px;
+    background-color: rgba(216, 19, 19, 0.804);
+}
+/* thirdsection */
+
+#thirdsection{
+    height: 80vh;
+    width: 100%; 
+    background-image: url(../hotel/he.jpg);
+    background-attachment: fixed; /* Pour un défilement fluide de l'image de fond */
+    
+}
+
+
+.facility{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.facility .box{
+    height: 100%;
+    width: 310px;
+    border: 2px solid white;
+    background-color: #0040ff;
+}
+
+.facility .box h2{
+    text-align: center;
+    position: relative;
+    top: 80%;
+    color: white;
+    background-color: #0000005e;
+}
+
+.box:nth-child(1){
+    background-image: url(../hotel/swim.webp);
+    background-size: cover;
+}
+.box:nth-child(2){
+    background-image: url(../hotel/spa.jpg);
+    background-size: cover;
+}
+.box:nth-child(3){
+    background-image: url(../hotel/food.jpg);
+    background-size: cover;
+}
+.box:nth-child(4){
+    background-image: url(../hotel/gym.jpeg);
+    background-size: cover;
+}
+.box:nth-child(5){
+    background-image: url(../hotel/party.webp);
+    background-size: cover
+}
+
+@media(max-width: 30rem){
+    nav{
+        justify-content: center;
+        position: relative;
+        background-color: #96a8f88c;
+    }
+    nav ul{
+        display: none;
+    }
+    #firstsection{
+        height: 50vh;
+        text-align: center;
+    }
+    #firstsection .carousel-inner{
+        height: 50vh;
+    }
+    #firstsection .carousel-inner::after{
+        height: 50vh;
+    }
+    #firstsection .carousel-item img{
+        height: 50vh;
+    }
+    #firstsection .welcomeline{
+        height: 50vh;
+        
+    }
+    #firstsection .welcometag{
+        text-align: center;
+        font-size: 50px;
+        line-height: 60px;
+    }
+    #secondsection{
+        height: auto;
+    }
+    #secondsection{
+        height: 240vh;
+    }
+    #secondsection img{
+        display: none;
+    }
+    .ourroom{
+        top: 30px;
+        height: auto;
+    }
+    .roomselect{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .roomselect .roombox{
+        width: 75%;
+    }
+
+
+    #thirdsection{
+        height: 100vh;
+    }
+    .facility{
+        height: 70%;
+        flex-wrap: wrap;
+    }
+    .facility .slide{
+        margin: 0;
+        padding: 0;
+        height: 55%;
+        width: 50%; 
+    }
+
+    .facility .box h2{
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    
+    .box:nth-child(5){
+        display: none;
+    }
+    /* contact */
+/* fourth section */
+#fourthsection {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('./hotel/riad-zwen-zwen-maroc-ovoyages-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+.contact {
+    height: 70%;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.contact us {
+    margin-top: 3rem;
+    display: flex;
+    font-family: var(--ff-roboto);
+}
+
+form {
+    width: 50%;
+}
+
+.cbox {
+    width: 45%;
+    margin-left: 70px;
+    padding: 10px 30px;
+}
+
+.cbox-message {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.cbox-line {
+    width: 20%;
+    height: 0.2em;
+    background-color: #fb036b;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+.c_boxx a p {
+    color: white;
+    font-size: 1em;
+    font-weight: 100;
+    margin: 1rem;
+    padding: 0px 40px;
+}
+.c_boxx a {
+    padding: 1em;
+    margin-bottom: 2em;
+    padding-left: 2em;
+    border: 0.1em solid #fc036b;
+    background-color: #fc036b;
+    color: white;
+    display: flex;
+    border-radius: 2em;
+    align-items: center;
+    border: #fc036b 0.1em solid;
+    font-size: 1em;
+}
+
+.c_boxx a:hover {
+    background-color: white;
+    color: #fc036b;
+    transition: all 0.5s ease;
+}
+
+.c_boxx i {
+    font-size: 38px;
+    margin-right: 10px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 0px 0px 7px 6px;
+    display: inline-block;
+}
+
+input[type="submit"] {
+    background-color: #fc036b;
+    color: whitesmoke;
+    padding: 12px 50px;
+    border: 2px solid #fc036b;
+    border-radius: 100vmax;
+    cursor: pointer;
+    font-family: var(--ff-montserrat);
+    font-size: var(--fs-links-btns);
+}
+
+input[type="submit"]:hover {
+    background-color: whitesmoke;
+    color: #fc036b;
+}
+
+.cform {
+    background-color: #222;
+    padding: 1em;
+    border-radius: 0.5rem;
+}
+
+.ccol {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.crow-in {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.crow-message {
+    margin: 1rem;
+}
+
+.crow-message div {
+    width: 100px;
+    display: block;
+    height: 50px;
+    border-bottom: none;
+}
+
+.ccol-left {
+    margin: 1em;
+}
+
+.ccol {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+}
+
+#name {
+    width: 90%;
+    margin: 1em;
+}
+
+#email {
+    width: 90%;
+    margin: 1em;
+}
+
+.crow:after,
+.crow-s::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.crow-s {
+    margin: 1em;
+    color: #fc036b;
+}
+
+  
+}
+.hi-slide{
+    position: relative;
+    width: 754px;
+    height: 292px;
+    border-radius: 50px;
+    margin: 115px auto 0;
+}
+.hi-slide .hi-next,
+.hi-slide .hi-prev{
+    position:absolute;
+    top:50%;
+    width:40px;
+    height:80px;
+    margin-top:-40px;
+    border-radius:5px;
+    line-height:80px;
+    text-align:center;
+    cursor:pointer;
+    background-color:#666;
+    color:#000000;
+    opacity:.7;
+    transition:all .6s;
+    font-size:30px}.hi-slide .hi-next:hover,.hi-slide .hi-prev:hover{opacity:1;
+    background-color:#444;
+}
+.hi-slide .hi-prev{
+    left:-60px
+}
+.hi-slide .hi-prev::before{
+    content:'<'
+}
+.hi-slide .hi-next{
+right:-60px
+}
+.hi-slide .hi-next::before{
+    content:'>'
+}
+.hi-slide > ul{
+    list-style:none;position:relative;width:754px;height:292px;margin:0;padding:0}
+.hi-slide > ul > li{
+overflow:hidden;position:absolute;z-index:0;left:377px;top:146px;width:0;height:0;margin:0;padding:0;border:2px solid #110f0f;border-radius:5px;background-color:#333;cursor:pointer
+}
+.hi-slide > ul > li > img{
+    width:100%;height:100%
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cform {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+}
+
+.crow-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.color {
+    color: #333;
+}
+
+.crow-in input,
+.crow-in select,
+.crow-in textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.crow-s {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.crow-s:hover {
+    background-color: #45a049;
+}
+
+.cbox {
+    margin-top: 20px;
+}
+
+.cbox-message {
+    text-align: center;
+    color: #333;
+}
+
+.c_boxy {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Ajustez cela selon vos préférences */
+    flex-wrap: none; /* Permet au contenu de passer à la ligne si nécessaire */
+}
+
+.c_boxx {
+    flex: 0 0 30%; /* Ajustez cela pour définir la largeur de chaque bloc */
+    margin-bottom: 10px;
+}
+
+.c_boxx a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.c_boxx i {
+    margin-right: 10px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .cform {
+        width: 100%;
+    }
+}
+
